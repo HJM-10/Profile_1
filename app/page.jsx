@@ -5,11 +5,11 @@ import ScrollMotion from "./scroll-motion";
 
 const index = [
   { title: "DNF Trading", image: "/instruments.png", kind: "3D configurator" },
-  { title: "Wilton Dental", image: "/tooth.webp", kind: "Website concept" },
-  { title: "Hotel Javson", image: "/hotel.jpg", kind: "Hospitality prototype" },
-  { title: "SpendTrail", image: "/spendtrail.png", kind: "Flutter app" },
-  { title: "3DFV", image: "/restaurant.jpg", kind: "Restaurant ordering" },
-  { title: "TRST Maintenance", image: "/property.png", kind: "Service website concept" },
+  { title: "PhishScan", image: "/showcase/phishscan.webp", kind: "Frontend preview with demo messages" },
+  { title: "SialMail", image: "/showcase/sialmail.webp", kind: "Marketing frontend" },
+  { title: "Personal AI Agent", image: "/showcase/personal-agent.webp", kind: "Gradio frontend" },
+  { title: "NeuroSpatial-OS", image: "/showcase/neurospatial.webp", kind: "Research concept illustration" },
+  { title: "GRIDGUARD PK", image: "/showcase/gridguard.webp", kind: "Research proposal illustration" },
 ];
 
 export default function Home() {

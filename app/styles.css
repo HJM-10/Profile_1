@@ -1,9 +1,9 @@
 * { box-sizing: border-box; }
-:root { color-scheme: light; scroll-behavior: smooth; }
-body { margin: 0; background: #f5f1ea; color: #171717; font: 1rem/1.55 Arial, sans-serif; }
+:root { color-scheme: dark; scroll-behavior: smooth; }
+body { margin: 0; background: #141416; color: #f2f1ee; font: 1rem/1.55 Arial, sans-serif; }
 a { color: inherit; }
 a:focus-visible, summary:focus-visible { outline: 2px solid #9b78fe; outline-offset: 5px; }
-.opening { min-height: 100svh; display: grid; place-content: center; justify-items: center; padding: 1.5rem; background: radial-gradient(ellipse at center, #121025, #090813 70%); color: #fff; }
+.opening { min-height: 100svh; display: grid; place-content: center; justify-items: center; padding: 1.5rem; background: radial-gradient(ellipse at center, #252529, #111113 70%); color: #fff; }
 .signature { width: min(440px, 84vw); aspect-ratio: 410 / 195; position: relative; }
 .signature canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .signature p { position: absolute; inset: 57% 0 auto; margin: 0; text-align: center; font-size: clamp(1.7rem, 5vw, 3rem); letter-spacing: .42em; text-indent: .42em; font-weight: 700; text-shadow: 0 0 17px #e6e4ff85; }
@@ -41,10 +41,10 @@ footer a { text-underline-offset: .3em; }
 @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
 
 /* The paper interlude leads into the full-width engraved image. */
-.paper-art { width: min(490px, 76vw); height: clamp(8rem, 19vw, 18rem); margin: 0 auto; background: url('/engraving.png') center top / auto 290% no-repeat; mix-blend-mode: multiply; mask-image: linear-gradient(black 55%, transparent); }
+.paper-art { width: min(490px, 76vw); height: clamp(8rem, 19vw, 18rem); margin: 0 auto; background: url('/engraving.png') center top / auto 290% no-repeat; filter: grayscale(1) invert(1); mix-blend-mode: screen; opacity:.62; mask-image: radial-gradient(ellipse at 50% 33%, black 18%, transparent 75%); }
 .engraving { min-height: 82svh; padding-bottom: clamp(4rem, 12vh, 8rem); }
 .engraving h1 { font-size: clamp(4.5rem, 16vw, 14rem); line-height: .82; letter-spacing: -.085em; margin: 0; text-shadow: 0 6px 28px #000a; }
-.manifesto { color: #f9f7f3; padding: clamp(4rem, 10vw, 9rem) clamp(1.25rem, 7vw, 7rem); background: radial-gradient(ellipse at 77% 0%, #48454c, transparent 43%), #111116; }
+.manifesto { color: #f9f7f3; padding: clamp(4rem, 10vw, 9rem) clamp(1.25rem, 7vw, 7rem); background: radial-gradient(ellipse at 77% 0%, #333336, transparent 43%), #171719; }
 .kicker { margin: 0 0 1.5rem; text-transform: uppercase; letter-spacing: .14em; font-size: .84rem; }
 .manifesto h2 { margin: 0 0 1.6rem; text-transform: uppercase; font-size: clamp(3rem, 10vw, 10rem); line-height: .88; letter-spacing: -.092em; }
 .manifesto-bottom { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 0 0 3.5rem; }
@@ -54,7 +54,7 @@ footer a { text-underline-offset: .3em; }
 .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; border-top: 1px solid #ffffff42; padding-top: 1.3rem; }
 .services h3 { margin: 0 0 .25rem; font-size: 1.2rem; }
 .services p { margin: 0; color: #ded9e2; }
-.work { background: #f8f5ef; padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 4rem); }
+.work { background: #1c1c1e; padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 4rem); }
 .work h2 { margin-left: clamp(0rem, 3vw, 3rem); font-size: clamp(2rem, 5vw, 4.5rem); text-transform: uppercase; font-weight: 500; letter-spacing: -.05em; }
 .feature-strip { display: grid; grid-template-columns: 1fr 1.25fr 1fr; align-items: center; gap: clamp(.4rem, 2vw, 1.6rem); padding: 2rem 0; perspective: 1050px; }
 .feature { position: relative; isolation: isolate; width: 100%; aspect-ratio: 1.35; padding: 0; overflow: hidden; color: white; background: #1f1d20; border: 1px solid #494549; cursor: pointer; transition: transform 420ms ease, opacity 250ms; }
@@ -67,9 +67,9 @@ footer a { text-underline-offset: .3em; }
 .feature-controls { display: flex; justify-content:center; align-items: center; gap: 1.2rem; text-align:center; min-height: 8rem; }
 .feature-controls h3 { margin: 0; }
 .feature-controls p { margin: 0; }
-.feature-controls button { font: inherit; color: inherit; border: 1px solid #b9b0a4; background: transparent; border-radius: 2rem; padding: .46rem .7rem; cursor: pointer; }
-.feature-controls button:hover { background: #e4ded2; }
-.archive { padding: 2rem clamp(1rem, 6vw, 5rem) clamp(4rem, 8vw, 7rem); background: #f8f5ef; }
+.feature-controls button { font: inherit; color: inherit; border: 1px solid #6b6a6e; background: transparent; border-radius: 2rem; padding: .46rem .7rem; cursor: pointer; }
+.feature-controls button:hover { background: #414144; }
+.archive { padding: 2rem clamp(1rem, 6vw, 5rem) clamp(4rem, 8vw, 7rem); background: #1c1c1e; }
 .archive-ring { position: relative; width: min(670px, 100%); aspect-ratio: 1.12; margin: 0 auto 4rem; display: grid; place-items: center; }
 .archive-ring h2 { font-size: clamp(1.25rem, 3vw, 2.5rem); margin: 0; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
 .face { position:absolute; left:var(--x); top:var(--y); width:var(--w); height:var(--h); clip-path:polygon(var(--clip)); color:white; background:#323033; overflow:hidden; }
@@ -88,7 +88,7 @@ footer a { text-underline-offset: .3em; }
 .index-study:target { display:grid; }
 .index-study p { margin:0; }
 .index-study h3 { margin:.1rem 0 .65rem; }
-footer { min-height: 70svh; display:grid; place-content:center; background:radial-gradient(ellipse at center,#332f39,#121218 70%); }
+footer { min-height: 70svh; display:grid; place-content:center; background:radial-gradient(ellipse at center,#303033,#141416 70%); }
 footer h2 { font-size: clamp(3rem, 12vw, 11rem); text-shadow:0 0 24px #f6f4ff5c; margin-bottom:1.6rem; letter-spacing:-.08em; }
 .footer-actions { display:flex; gap:.55rem; justify-content:center; flex-wrap:wrap; }
 footer > p { margin:2rem 0 0; color:#dbd7df; font-size:.85rem; }
