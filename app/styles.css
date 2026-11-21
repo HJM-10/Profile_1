@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; scroll-behavior: smooth; }
+body { margin: 0; background: #f5f1ea; color: #171717; font: 1rem/1.55 Arial, sans-serif; }
+a { color: inherit; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #9b78fe; outline-offset: 5px; }
+.opening { min-height: 100svh; display: grid; place-content: center; justify-items: center; padding: 1.5rem; background: radial-gradient(ellipse at center, #121025, #090813 70%); color: #fff; }
+.signature { width: min(440px, 84vw); aspect-ratio: 410 / 195; position: relative; }
+.signature canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.signature p { position: absolute; inset: 57% 0 auto; margin: 0; text-align: center; font-size: clamp(1.7rem, 5vw, 3rem); letter-spacing: .42em; text-indent: .42em; font-weight: 700; text-shadow: 0 0 17px #e6e4ff85; }
+.enter { margin-top: 1.55rem; color: #e7e3f7; text-underline-offset: .45em; padding: .55rem; }
+.bar { min-height: 110px; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 1.3rem clamp(1.25rem, 6vw, 6rem); font-family: Georgia, serif; }
+.bar a { text-decoration: none; }
+nav { display: flex; gap: clamp(.9rem, 3vw, 2.7rem); }
+nav a:hover { text-decoration: underline; }
+.brand { font-size: 1.17rem; }
+.engraving { min-height: 65svh; isolation: isolate; position: relative; display: grid; place-items: end center; overflow: hidden; padding: clamp(3rem, 8vw, 8rem) 1.25rem; color: white; background: #151414; }
+.engraving::before, .engraving::after, .engraving-inset { position: absolute; inset: 0; content: ""; z-index: -2; background: url('/engraving.png') no-repeat; background-size: 330% auto; }
+.engraving::before { background-position: left 72%; }
+.engraving::after { mask-image: linear-gradient(90deg, transparent 39%, black 61%); background-position: right 71%; }
+.engraving-inset { inset: 19% 36% 10%; z-index: -1; background-position: 8% 70%; background-size: auto 220%; box-shadow: 0 25px 60px #0008; border: 1px solid #ffffff42; }
+.intro { position: relative; text-align: center; background: radial-gradient(ellipse, #000b, transparent 72%); }
+.intro p { font-size: clamp(4.5rem, 17vw, 13.5rem); margin: 0; line-height: .82; text-transform: uppercase; font-weight: 800; letter-spacing: -.09em; }
+.intro h1 { font-size: clamp(1rem, 2.6vw, 1.55rem); margin: 1.6rem 0 0; font-weight: 500; }
+.work { padding: clamp(3rem, 8vw, 7.5rem) clamp(1.25rem, 6vw, 6rem); }
+.work h2, footer h2 { margin: 0 0 2rem; font-size: clamp(2.5rem, 7vw, 6rem); line-height: .95; letter-spacing: -.065em; }
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.2rem, 3vw, 3rem); }
+article { border-top: 1px solid #777; padding-top: 1rem; }
+article img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; background: #ddd9d0; }
+.type { margin: 1rem 0 0; color: #555; }
+h3 { font-size: clamp(1.3rem, 3vw, 2rem); margin: .1rem 0 .65rem; }
+summary { width: fit-content; cursor: pointer; }
+details p { max-width: 34ch; }
+footer { background: #151419; color: #fff; padding: clamp(3.5rem, 10vw, 8rem) 1.25rem; text-align: center; }
+footer a { text-underline-offset: .3em; }
+@media (max-width: 650px) {
+  .bar { align-items: flex-start; flex-direction: column; min-height: 0; gap: .6rem; }
+  .engraving { min-height: 55svh; }
+  .engraving-inset { inset-inline: 24%; }
+  .projects { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
