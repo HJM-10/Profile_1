@@ -2,7 +2,9 @@
 
 ## Cinematic portfolio
 
-A line-drawn name reveal leads into an engraved About section, expandable project stories, and a contact section.
+A line-drawn opening leads into an engraved About section, a dark services section, a curved featured-project gallery, a hexagonal work index, and a contact finale.
+
+The All projects section lists 24 entries and can be filtered by category.
 
 ## Run locally
 
