@@ -153,6 +153,7 @@
   @media (max-width: 650px) { .showcase-deck { grid-template-columns: 1fr; } }
 }
 .project-showcase { --showcase-paper:#1c1c1e; --showcase-ink:#f5f3ee; --showcase-fade:#c1bfc0; --showcase-line:#666569; border-top:1px solid #3e3d40; }
+.showcase-anchor { display:block; scroll-margin-top:4.8rem; }
 .showcase-card .project-art { box-shadow:0 24px 64px #0707099c; }
 .showcase-card .project-art { border-radius: 5% 15% 4% 12% / 3% 8% 3% 6%; }
 @media (prefers-reduced-motion: no-preference) {
@@ -161,13 +162,10 @@
   .engraving::before, .engraving::after { transform:translateY(calc(var(--scene,0) * 3vh)) scale(1.09); }
   .engraving-inset { transform:translateY(calc(var(--scene,0) * -7vh)); }
   .engraving h1 { transform:translateY(calc(var(--scene,0) * -11vh)) scale(calc(1 + var(--scene,0) * .13)); }
-  .manifesto, .work, .archive { overflow:clip; }
+  .manifesto { overflow:clip; }
   .manifesto h2 { transform:translateX(calc(var(--scene,0) * 5vw)); }
   .services { transform:translateY(calc(var(--scene,0) * -3vh)); }
-  .feature-0 { transform:translateY(calc(var(--scene,0) * 5vh)) rotateY(calc(24deg + var(--scene,0) * 14deg)) rotateZ(-6deg); }
-  .feature-1 { transform:translateY(calc(var(--scene,0) * -2.5vh)); }
-  .feature-2 { transform:translateY(calc(var(--scene,0) * -5vh)) rotateY(calc(-24deg + var(--scene,0) * 14deg)) rotateZ(6deg); }
-  .archive-ring { transform: rotate(calc(var(--scene,0) * 22deg)) scale(calc(1 + var(--scene,0) * .06)); }
+  .archive-ring { transform: rotate(calc(var(--scene,0) * 10deg)); }
   footer { overflow:clip; }
   footer h2 { transform:scale(calc(1 + max(0, var(--scene,0)) * .16)); }
 }

@@ -6,6 +6,8 @@ import "./project-showcase.css";
 
 const groups = [showcase.slice(0, 6), showcase.slice(6, 12), showcase.slice(12, 18), showcase.slice(18)];
 const chapterTitles = ["Applications", "AI and research", "Web experiences", "Tools and experiments"];
+const shortcuts = ["DNF Trading", "PhishScan", "SialMail", "Personal AI Agent", "NeuroSpatial-OS", "GRIDGUARD PK"]
+  .map(title => showcase.findIndex(project => project.coverTitle === title));
 
 export default function ProjectArchive() {
   const [active, setActive] = useState(0);
@@ -88,13 +90,29 @@ export default function ProjectArchive() {
 
   return (
     <section className="project-showcase" id="all-projects" aria-labelledby="archive-title">
+      <span className="showcase-anchor" id="work" aria-hidden="true" />
       <header className="showcase-heading">
-        <h2 id="archive-title">All projects</h2>
+        <h2 id="archive-title">Projects</h2>
         <label htmlFor="project-jump">Jump to a project</label>
         <select id="project-jump" value={active} onChange={event => navigate(Number(event.target.value))}>
           {showcase.map((project, index) => <option value={index} key={project.title}>{project.title}</option>)}
         </select>
       </header>
+
+      <div className="ring-viewport" id="index">
+        <div className="archive-ring" data-scroll-scene role="group" aria-label="Featured project shortcuts">
+          <span className="ring-label" aria-hidden="true">Select a project</span>
+          {shortcuts.map((projectIndex, index) => {
+            const project = showcase[projectIndex];
+            return (
+              <button className={`face face-${index + 1}`} key={project.title} type="button" onClick={() => navigate(projectIndex)}>
+                <img src={project.image} alt="" />
+                <span>{project.coverTitle}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
 
       {groups.map((group, chapter) => (
         <div className="showcase-track" ref={element => { tracks.current[chapter] = element; }} key={chapterTitles[chapter]} style={{ "--track-height": `${100 + (group.length - 1) * 68}svh` }}>
