@@ -1,6 +1,7 @@
 import Opening from "./opening";
 import FeaturedWork from "./featured-work";
 import ProjectArchive from "./project-archive";
+import ScrollMotion from "./scroll-motion";
 
 const index = [
   { title: "DNF Trading", image: "/instruments.png", kind: "3D configurator" },
@@ -14,6 +15,7 @@ const index = [
 export default function Home() {
   return (
     <>
+      <ScrollMotion />
       <Opening />
       <main id="portfolio">
         <section id="about" className="about">
@@ -23,14 +25,14 @@ export default function Home() {
               <a href="#about">About</a><a href="#work">Featured</a><a href="#all-projects">All projects</a><a href="#contact">Contact</a>
             </nav>
           </header>
-          <div className="paper-art" aria-hidden="true" />
-          <div className="engraving">
+          <div className="paper-art" data-scroll-scene aria-hidden="true" />
+          <div className="engraving" data-scroll-scene>
             <div className="engraving-inset" aria-hidden="true" />
             <h1>ABOUT</h1>
           </div>
         </section>
 
-        <section className="manifesto" aria-labelledby="manifesto-title">
+        <section className="manifesto" data-scroll-scene aria-labelledby="manifesto-title">
           <p className="kicker">Huzaifa Jayyad · Full-stack developer</p>
           <h2 id="manifesto-title">Where design<br />meets software.</h2>
           <div className="manifesto-bottom">
@@ -44,9 +46,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="work" className="work"><FeaturedWork /></section>
+        <section id="work" className="work" data-scroll-scene><FeaturedWork /></section>
 
-        <section className="archive" id="index">
+        <section className="archive" id="index" data-scroll-scene>
           <div className="archive-ring">
             {index.map((project, i) => (
               <a className={`face face-${i + 1}`} key={project.title} href={`#study-${i + 1}`}>
@@ -68,7 +70,7 @@ export default function Home() {
 
         <ProjectArchive />
 
-        <footer id="contact">
+        <footer id="contact" data-scroll-scene>
           <h2>LET’S TALK.</h2>
           <div className="footer-actions"><a href="https://github.com/HJM-10">GitHub</a><a href="#work">Selected work</a><a href="#opening">Back to top</a></div>
           <p>Huzaifa Jayyad · Full-stack developer</p>

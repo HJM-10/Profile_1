@@ -4,8 +4,10 @@ import { useState } from "react";
 
 const projects = [
   { title: "DNF Trading", category: "3D product configuration", image: "/instruments.png", note: "A working product customizer with an ordering flow and admin controls." },
+  { title: "3DFV", category: "Restaurant ordering app", image: "/restaurant.jpg", note: "An Expo and FastAPI ordering app with a QR-to-AR viewing flow." },
   { title: "Hotel Javson", category: "Hospitality website concept", image: "/hotel.jpg", note: "A cinematic redesign concept for exploring the hotel and planning a stay." },
   { title: "Wilton Dental", category: "Multi-page redesign concept", image: "/tooth.webp", note: "Treatment pages, a guided care journey, and motion built around dental artwork." },
+  { title: "SpendTrail", category: "Flutter spending tracker", image: "/spendtrail.png", note: "An Android demo for tracking spending, simulating purchases, and reviewing refunds." },
 ];
 
 export default function FeaturedWork() {

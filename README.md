@@ -4,7 +4,7 @@
 
 A line-drawn opening leads into an engraved About section, a dark services section, a curved featured-project gallery, a hexagonal work index, and a contact finale.
 
-The All projects section lists 24 entries and can be filtered by category.
+The All projects section presents 24 visual covers in four scroll-driven chapters. Use the project picker to jump to a cover, or select a cover to read the details. Reduced-motion users get a visual grid.
 
 ## Run locally
 

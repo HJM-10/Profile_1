@@ -51,7 +51,7 @@ export default function Opening() {
   }, []);
 
   return (
-    <section className="opening" id="opening" aria-label="Portfolio opening">
+    <section className="opening" id="opening" data-scroll-scene aria-label="Portfolio opening">
       <div className="signature">
         <canvas ref={canvasRef} width={410} height={195} aria-hidden="true" />
         <p>HUZAIFA</p>
